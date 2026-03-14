@@ -35,11 +35,11 @@ const transporter = nodemailer.createTransport({
 
 transporter
   .sendMail({
-    from: 'test@reactmasters.com',
+    from: 'test@brumkit.com',
     to: 'user@example.com',
-    subject: 'Test Email from React Masters',
+    subject: 'Test Email from Brumkit',
     text: 'This is a test email to verify Mailhog integration!',
-    html: '<h1>Hello from React Masters!</h1><p>This is a test email to verify Mailhog integration.</p>',
+    html: '<h1>Hello from Brumkit!</h1><p>This is a test email to verify Mailhog integration.</p>',
   })
   .then((info) => {
     console.log('✅ Mailhog working! Email sent:', info.messageId);

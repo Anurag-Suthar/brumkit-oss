@@ -23,7 +23,7 @@ export const EmailChangeVerification = ({
 }: EmailChangeVerificationProps) => (
   <Html>
     <Head />
-    <Preview>Verify your new email address for React Masters</Preview>
+    <Preview>Verify your new email address for Brumkit</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>Verify Your New Email</Heading>
@@ -54,8 +54,8 @@ export const EmailChangeVerification = ({
           secure your account immediately.
         </Text>
         <Text style={footer}>
-          <Link href="https://reactmasters.com" style={link}>
-            React Masters
+          <Link href="https://brumkit.com" style={link}>
+            Brumkit
           </Link>
         </Text>
       </Container>

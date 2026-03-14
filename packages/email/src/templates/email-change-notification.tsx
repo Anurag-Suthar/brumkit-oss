@@ -28,7 +28,7 @@ export const EmailChangeNotification = ({
         <Text style={text}>Hi {name},</Text>
         <Text style={text}>
           This is a security notification to inform you that someone requested
-          to change your React Masters account email address.
+          to change your Brumkit account email address.
         </Text>
         <Text style={alertText}>
           <strong>New email address:</strong> {newEmail}
@@ -47,17 +47,17 @@ export const EmailChangeNotification = ({
         </Text>
         <Text style={text}>
           If you're having trouble, please contact our support team at{' '}
-          <Link href="mailto:support@reactmasters.com" style={link}>
-            support@reactmasters.com
+          <Link href="mailto:support@brumkit.com" style={link}>
+            support@brumkit.com
           </Link>
         </Text>
         <Hr style={hr} />
         <Text style={footer}>
-          This is an automated security notification from React Masters.
+          This is an automated security notification from Brumkit.
         </Text>
         <Text style={footer}>
-          <Link href="https://reactmasters.com" style={link}>
-            React Masters
+          <Link href="https://brumkit.com" style={link}>
+            Brumkit
           </Link>
         </Text>
       </Container>

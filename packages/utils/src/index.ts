@@ -1,7 +1,7 @@
 /**
  * @repo/utils
  *
- * Shared utility functions for React Masters monorepo.
+ * Shared utility functions for Brumkit monorepo.
  */
 
 export * from './string';

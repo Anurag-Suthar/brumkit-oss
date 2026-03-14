@@ -30,8 +30,8 @@ export function PasswordChangedEmail({
             <Text style={text}>Hi {name},</Text>
 
             <Text style={text}>
-              This is a confirmation that your password for your React Masters
-              account was just changed.
+              This is a confirmation that your password for your Brumkit account
+              was just changed.
             </Text>
 
             <Text style={text}>

@@ -1,7 +1,7 @@
 /**
  * @repo/types
  *
- * Shared TypeScript types for React Masters monorepo.
+ * Shared TypeScript types for Brumkit monorepo.
  *
  * @example
  * ```ts

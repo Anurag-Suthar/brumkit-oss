@@ -25,13 +25,13 @@ export function VerificationEmail({
       <Body style={main}>
         <Container style={container}>
           <Section style={box}>
-            <Heading style={h1}>Welcome to React Masters! 👋</Heading>
+            <Heading style={h1}>Welcome to Brumkit! 👋</Heading>
 
             <Text style={text}>Hi {name},</Text>
 
             <Text style={text}>
-              Thanks for signing up! To get the most out of React Masters,
-              please verify your email address.
+              Thanks for signing up! To get the most out of Brumkit, please
+              verify your email address.
             </Text>
 
             <Text style={text}>

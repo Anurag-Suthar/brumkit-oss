@@ -22,13 +22,13 @@ export function WelcomeEmail({ name, dashboardLink }: WelcomeEmailProps) {
       <Body style={main}>
         <Container style={container}>
           <Section style={box}>
-            <Heading style={h1}>Welcome to React Masters! 🎉</Heading>
+            <Heading style={h1}>Welcome to Brumkit! 🎉</Heading>
 
             <Text style={text}>Hi {name},</Text>
 
             <Text style={text}>
               Your email has been verified! You now have full access to all
-              React Masters features.
+              Brumkit features.
             </Text>
 
             <Text style={text}>

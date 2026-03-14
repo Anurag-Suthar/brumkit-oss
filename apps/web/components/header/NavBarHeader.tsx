@@ -31,7 +31,7 @@ export const NavBarHeader = ({ session }: { session: Session }) => {
       <div className=" mx-auto flex h-14  items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-6">
           <Link href="/dashboard" className="flex items-center gap-2 font-bold">
-            <span className="text-xl">React Masters</span>
+            <span className="text-xl">Brumkit</span>
           </Link>
           <nav className="flex items-center gap-4 text-sm">
             <Link href="/dashboard" className={getLinkClassName('/dashboard')}>

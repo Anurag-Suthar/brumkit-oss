@@ -21,7 +21,7 @@ async function sendEmail({
   to,
   subject,
   react,
-  from = `React Masters <${FROM_EMAIL}>`,
+  from = `Brumkit <${FROM_EMAIL}>`,
 }: {
   to: string;
   subject: string;
@@ -107,7 +107,7 @@ export async function sendWelcomeEmail({
   try {
     return await sendEmail({
       to,
-      subject: 'Welcome to React Masters!',
+      subject: 'Welcome to Brumkit!',
       react: WelcomeEmail({ name, dashboardLink }),
     });
   } catch (error) {
@@ -131,7 +131,7 @@ export async function sendPasswordChangedEmail({
   try {
     return await sendEmail({
       to,
-      subject: 'Your password has been changed - React Masters',
+      subject: 'Your password has been changed - Brumkit',
       react: PasswordChangedEmail({ name, loginLink }),
     });
   } catch (error) {
@@ -169,7 +169,7 @@ export async function sendPasswordResetEmail({
   try {
     return await sendEmail({
       to,
-      subject: 'Reset your password - React Masters',
+      subject: 'Reset your password - Brumkit',
       react: PasswordResetEmail({ name, resetLink }),
     });
   } catch (error) {
@@ -210,7 +210,7 @@ export async function sendEmailChangeVerification({
   try {
     return await sendEmail({
       to: email,
-      subject: 'Verify your new email address - React Masters',
+      subject: 'Verify your new email address - Brumkit',
       react: EmailChangeVerification({ name: userName, verificationLink }),
     });
   } catch (error) {
@@ -249,7 +249,7 @@ export async function sendEmailChangeNotification({
   try {
     return await sendEmail({
       to: email,
-      subject: 'Security notification: Email change requested - React Masters',
+      subject: 'Security notification: Email change requested - Brumkit',
       react: EmailChangeNotification({ name: userName, newEmail }),
     });
   } catch (error) {
@@ -286,7 +286,7 @@ export async function sendAccountDeletionNotification({
   try {
     return await sendEmail({
       to: email,
-      subject: 'Your account has been scheduled for deletion - React Masters',
+      subject: 'Your account has been scheduled for deletion - Brumkit',
       react: AccountDeletionNotificationEmail({ userName }),
     });
   } catch (error) {
@@ -323,7 +323,7 @@ export async function sendAccountDeletionFinalEmail({
   try {
     return await sendEmail({
       to: email,
-      subject: 'Your account has been permanently deleted - React Masters',
+      subject: 'Your account has been permanently deleted - Brumkit',
       react: AccountDeletionFinalEmail({ userName }),
     });
   } catch (error) {

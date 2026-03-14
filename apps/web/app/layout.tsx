@@ -12,7 +12,7 @@ import './global.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'React Masters - Full Stack Starter Kit',
+  title: 'Brumkit - Full Stack Starter Kit',
   description:
     'A modern full-stack starter kit with Next.js, Prisma, and Auth.js',
 };

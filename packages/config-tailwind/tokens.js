@@ -1,7 +1,7 @@
 /**
  * Design Tokens
  *
- * Centralized design system tokens for React Masters.
+ * Centralized design system tokens for Brumkit.
  * These tokens ensure consistency across admin and user apps.
  */
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Shared ESLint configurations for React Masters monorepo",
+  "description": "Shared ESLint configurations for Brumkit monorepo",
   "main": "./base.js",
   "exports": {
     "./base": "./base.js",

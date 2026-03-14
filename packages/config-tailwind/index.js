@@ -1,5 +1,5 @@
 /**
- * Tailwind CSS Preset for React Masters
+ * Tailwind CSS Preset for Brumkit
  *
  * Shared configuration for admin and user apps.
  * Includes design tokens, plugins, and best practices.
