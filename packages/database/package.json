@@ -28,6 +28,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:setup": "tsx test/setup-test-db.ts",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {

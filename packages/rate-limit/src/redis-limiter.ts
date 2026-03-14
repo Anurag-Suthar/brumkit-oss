@@ -1,4 +1,5 @@
 import { Redis as UpstashRedis } from '@upstash/redis';
+import type IoRedis from 'ioredis';
 import type {
   RateLimitConfig,
   RateLimitResult,
@@ -6,7 +7,7 @@ import type {
 } from './types';
 
 // Type for Redis client (either Upstash or ioredis)
-type RedisClient = UpstashRedis | any;
+type RedisClient = UpstashRedis | IoRedis;
 
 /**
  * Redis-based rate limiter
