@@ -1,15 +1,31 @@
 #!/bin/sh
 
-# Pre-commit hook
-# Run linting and formatting on staged files
+# ─────────────────────────────────────────────────────────────
+# PRE-COMMIT HOOK
+# Runs on: every `git commit`
+# Speed:   Fast — operates only on staged files via lint-staged
+#
+# What it does:
+#   1. ESLint --fix  →  auto-fixes lint errors per workspace package
+#   2. Prettier      →  auto-formats all staged file types
+#
+# If any step cannot be auto-fixed, the commit is blocked.
+# ─────────────────────────────────────────────────────────────
 
-echo "🔍 Running pre-commit checks..."
+echo ""
+echo "🔍 Pre-commit: linting & formatting staged files..."
+echo ""
 
 pnpm lint-staged --allow-empty
 
 if [ $? -ne 0 ]; then
-  echo "❌ Pre-commit checks failed. Please fix errors before committing."
+  echo ""
+  echo "❌ Pre-commit failed — lint or format errors could not be auto-fixed."
+  echo "   Please fix the remaining errors manually and stage the changes."
+  echo ""
   exit 1
 fi
 
-echo "✅ Pre-commit checks passed!"
+echo ""
+echo "✅ Pre-commit passed — all staged files are clean!"
+echo ""

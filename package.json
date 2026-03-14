@@ -29,12 +29,42 @@
   },
   "lint-staged": {
     "apps/web/**/*.{js,jsx,ts,tsx}": [
-      "pnpm --filter web lint:fix"
+      "pnpm --filter web lint:fix",
+      "prettier --write"
     ],
-    "packages/ui/src/**/*.{js,jsx,ts,tsx}": [
-      "pnpm --filter @repo/ui lint:fix"
+    "packages/ui/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/ui lint:fix",
+      "prettier --write"
     ],
-    "*.{json,md,yml,yaml}": [
+    "packages/auth/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/auth lint:fix",
+      "prettier --write"
+    ],
+    "packages/database/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/database lint:fix",
+      "prettier --write"
+    ],
+    "packages/email/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/email lint:fix",
+      "prettier --write"
+    ],
+    "packages/rate-limit/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/rate-limit lint:fix",
+      "prettier --write"
+    ],
+    "packages/types/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/types lint:fix",
+      "prettier --write"
+    ],
+    "packages/utils/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/utils lint:fix",
+      "prettier --write"
+    ],
+    "packages/validation/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/validation lint:fix",
+      "prettier --write"
+    ],
+    "**/*.{json,md,yml,yaml,css}": [
       "prettier --write"
     ]
   },
