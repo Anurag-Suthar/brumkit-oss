@@ -13,7 +13,7 @@
 
 // Auth.js Configuration (Edge-safe)
 export { authConfig } from './config/auth.config';
-export { auth, signIn, signOut, handlers } from './config/auth';
+export { auth, signIn, signOut, handlers } from './config/auth.edge';
 
 // Middleware (Edge-safe)
 export { authMiddleware, defaultMatcher } from './middleware';
