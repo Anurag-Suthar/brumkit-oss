@@ -21,6 +21,8 @@ import {
 import { Input } from '@repo/ui/input';
 import { loginSchema, type LoginInput } from '@repo/validation';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
@@ -32,12 +34,26 @@ import { useAuthMessages } from '@/lib/hooks/use-translations';
 export default function LoginPage() {
   const loginMutation = useLogin();
   const t = useAuthMessages();
+  const searchParams = useSearchParams();
 
   const form = useForm<LoginInput>({
     resolver: zodResolver(loginSchema),
     mode: 'onBlur',
     reValidateMode: 'onChange',
+    defaultValues: {
+      email: searchParams.get('email') || '',
+      password: searchParams.get('password') || '',
+    },
   });
+
+  // Update form values if search params change (e.g. from login-demo)
+  useEffect(() => {
+    const email = searchParams.get('email');
+    const password = searchParams.get('password');
+
+    if (email) form.setValue('email', email);
+    if (password) form.setValue('password', password);
+  }, [searchParams, form]);
 
   const onSubmit = async (data: LoginInput) => {
     try {

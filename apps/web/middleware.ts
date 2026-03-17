@@ -2,8 +2,21 @@ import { authMiddleware } from '@repo/auth/edge';
 
 export default authMiddleware({
   publicRoutes: ['/'],
-  authRoutes: ['/login', '/register'],
-  protectedRoutes: ['/dashboard/*', '/profile/*', '/settings/*'],
+  anonymousRoutes: [
+    '/login',
+    '/register',
+    '/forgot-password',
+    '/reset-password',
+    '/verify-email',
+    '/verify-email-change',
+    '/login-demo',
+  ],
+  protectedRoutes: [
+    '/dashboard/*',
+    '/profile/*',
+    '/notifications/*',
+    '/logout',
+  ],
   adminRoutes: ['/admin/*'],
 });
 

@@ -16,7 +16,7 @@ export interface AuthMiddlewareConfig {
    * Logged-in users will be redirected to the dashboard.
    * @example ['/login', '/register']
    */
-  authRoutes?: string[];
+  anonymousRoutes?: string[];
 
   /**
    * Routes that require authentication
@@ -57,7 +57,7 @@ export interface AuthMiddlewareConfig {
 
 const defaultConfig: Required<AuthMiddlewareConfig> = {
   publicRoutes: ['/'],
-  authRoutes: ['/login', '/register'],
+  anonymousRoutes: ['/login', '/register'],
   protectedRoutes: ['/dashboard/*'],
   adminRoutes: ['/admin/*'],
   moderatorRoutes: ['/moderate/*'],
@@ -105,15 +105,15 @@ export function authMiddleware(config: AuthMiddlewareConfig = {}) {
     const session = await auth();
     const isAuthenticated = !!session?.user;
 
-    // Redirect logged-in users away from auth routes
-    if (isAuthenticated && isInRoutes(path, cfg.authRoutes)) {
+    // Redirect logged-in users away from anonymous routes
+    if (isAuthenticated && isInRoutes(path, cfg.anonymousRoutes)) {
       return NextResponse.redirect(new URL('/dashboard', request.url));
     }
 
-    // Allow access to public and auth routes (if not handled above)
+    // Allow access to public and anonymous routes (if not handled above)
     if (
       isInRoutes(path, cfg.publicRoutes) ||
-      isInRoutes(path, cfg.authRoutes)
+      isInRoutes(path, cfg.anonymousRoutes)
     ) {
       return NextResponse.next();
     }

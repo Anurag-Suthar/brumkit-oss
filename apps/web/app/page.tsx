@@ -33,7 +33,7 @@ export default async function HomePage() {
           ) : (
             <>
               <Button asChild size="lg">
-                <Link href="/login">Get Started</Link>
+                <Link href="/login-demo">Get Started</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="/register">Sign Up</Link>
