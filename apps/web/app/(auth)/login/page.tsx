@@ -22,7 +22,7 @@ import { Input } from '@repo/ui/input';
 import { loginSchema, type LoginInput } from '@repo/validation';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
@@ -31,7 +31,7 @@ import { getErrorMessage } from '@/lib/api-error';
 import { useLogin } from '@/lib/hooks';
 import { useAuthMessages } from '@/lib/hooks/use-translations';
 
-export default function LoginPage() {
+function LoginForm() {
   const loginMutation = useLogin();
   const t = useAuthMessages();
   const searchParams = useSearchParams();
@@ -141,5 +141,13 @@ export default function LoginPage() {
         </div>
       </CardFooter>
     </Card>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }
