@@ -27,6 +27,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
 import { PasswordInput } from '@/components/form';
+import { AuthSkeleton } from '@/components/skeletons';
 import { getErrorMessage } from '@/lib/api-error';
 import { useLogin } from '@/lib/hooks';
 import { useAuthMessages } from '@/lib/hooks/use-translations';
@@ -146,7 +147,7 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<AuthSkeleton />}>
       <LoginForm />
     </Suspense>
   );
